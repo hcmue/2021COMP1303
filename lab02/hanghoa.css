@@ -1,0 +1,43 @@
+.hanghoa-box {
+  width: 220px;
+  height: 280px;
+  border: 1px solid blue;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 5px;
+  text-align: center;
+  position: relative;
+}
+.hanghoa-box:hover {
+  box-shadow: 0 0 10px red;
+}
+
+.hinh {
+  width: 180px;
+}
+.icon-new {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+}
+
+.hanghoa-ten {
+  font-weight: bolder;
+  color: green;
+  font-size: xx-large;
+}
+.hanghoa-gia {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  font-weight: bolder;
+  color: red;
+  font-size: larger;
+}
+.hanghoa-icons {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 25px;
+}

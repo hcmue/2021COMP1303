@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <style>
+            h1{color: chocolate;}
+            h3{background-color: #FFAF00;}
+            .myball{
+                width: 200px;
+                height: 200px;
+                background-color: cyan;
+                border-radius: 20%;
+            }
+            .ball1{
+                border-radius: 50%;
+            }
+            h1.note{
+                text-decoration: underline;
+            }
+            h1 > .note{
+                text-decoration: overline;
+                color: blue;
+            }
+
+            #ball2{
+                border-radius: 100px;
+                border: 100px dashed blue;
+                background-color: chartreuse;
+                width: 0;
+            }
+            div:hover{
+                text-decoration: overline;
+                font-weight: bolder;
+                color: coral;
+            }
+            div:not(:hover){
+                text-decoration: none;
+                font-weight: bold;
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Hello
+            <div class="note">ABC
+                <span class="note">HCMUE</span>
+            </div>
+            <div>
+                <span class="note">FIT</span>
+            </div>
+        </h1>
+        <h1 class="note">How are you?</h1>
+        <h3>COMP1303</h3>
+        <div class="myball"></div>
+        <div class="myball ball1"></div>
+        <div id="ball2"></div>
+        <div>
+            <h3 class="note">Color</h3>
+            Thuộc tính (color): <giá_trị>;<br>
+            color, background-color, border-color,..<br>
+            Giá trị:
+            <ul>
+                <li>Tiếng anh: red, green, blue</li>
+                <li>#rrggbb (0 <= r, g, b <= F)</li>
+                <li>rgb(x, y, z) với 0 <= x/y/x <= 255</li>
+            </ul>
+        </div>
+    </body>
+</html>

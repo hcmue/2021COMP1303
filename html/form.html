@@ -1,0 +1,56 @@
+<html>
+    <body>
+        <form action="XuLy.php" method="POST">
+            <table>
+                <caption>
+                    <h2>ĐĂNG KÝ THÀNH VIÊN</h2>
+                </caption>
+                <tr>
+                    <td>Username:</td>
+                    <td><input type="text" name="user" /></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="pass" /></td>
+                </tr>
+                <tr>
+                    <td>Hình</td>
+                    <td><input type="file" name="hinh" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <fieldset>
+                            <legend>Giới tính:</legend>
+                            <input type="radio" name="GT" />Nam
+                            <input type="radio" name="GT" />Nữ
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Nghề nghiệp
+                    </td>
+                    <td>
+                        <select name="NgheNghiep">
+                            <option value="HSSV">Học sinh - Sinh viên</option>
+                            <option value="GV">Giảng viên</option>
+                            <option value="BS">Bác sĩ</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Sở thích
+                    </td>
+                    <td>
+                        <textarea name="sothich" rows="5" cols="100">
+
+                        </textarea>
+                    </td>
+                </tr>
+            </table>
+            <button>Gửi</button>
+        </form>
+    </body>
+</html>
