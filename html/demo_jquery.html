@@ -19,6 +19,21 @@
         </style>
         <script>
             $(function(){
+                $("td").hover(function(){
+                    $(this).css({ 'box-shadow': '0 0 7px yellow'});
+                });
+                $("td").mouseout(function(){
+                    $(this).css({ 'box-shadow': '0 0 0 blue'});
+                });
+
+                var giatri = "X";
+                $("td").click(function(){
+                    if($(this).html() == ""){
+                        $(this).html(giatri);
+                        giatri = giatri == "X" ? "O" : "X";
+                    }
+                });
+
                 $("#btnShow").click(function(){
                     $("#tblBanCo").show(1000);
                 });
