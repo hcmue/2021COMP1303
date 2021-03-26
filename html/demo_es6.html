@@ -1,0 +1,42 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            console.log("Hello COMP1303")
+            //JSON
+            let sinhVien = {
+                "hoTen":"Tèo Nguyễn",
+                "mssv":"45104001",
+                "diem":"8.5"
+            }
+            console.log(sinhVien)
+            console.log(sinhVien.mssv)
+            console.log(sinhVien["diem"])
+            console.log("Kiểu", typeof(sinhVien))
+
+            let mang = [8, 5.5, 9.3]
+            console.log(typeof(mang))
+            console.log(mang[1]) //5.5
+
+            for(let i = 1; i < 11; i++){
+                console.log('9 x ', i, ' = ', 9*i)
+            }
+
+            const cong = (a, b) => a + b;
+            const add = function(a,b){
+                return a + b;
+            }
+            console.log(cong(10, 'a'))
+            console.log(add(4,3))
+
+
+            // setInterval(action, milisecond) : cứ bao nhiêu mili giây làm ... 1 lần
+            let runner = setInterval(() => console.log("hello"), 500)
+            //clearInterval(runner)
+            // setTimeout(action, milisecond): sau ?ms thì thực hiện action
+            setTimeout(() => clearInterval(runner), 4001)
+        </script>
+    </body>
+</html>

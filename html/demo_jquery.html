@@ -1,0 +1,57 @@
+<html>
+    <head></head>
+    <script src="../js/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#ten").html("Web");
+        });
+        
+    </script>
+    <body>
+        <div id="ten">COMP1303</div>
+        <button type="button" id=btnShow>Show</button>
+        <button type="button" id=btnHide>Hide</button>
+        <button type="button" id=btnToggle>Toggle</button>
+        <style>
+            td{width: 25px;height: 25px; border: 1px solid red;}
+            td:nth-child(odd){background-color: chartreuse;}
+            td:nth-child(even){background-color: coral;}
+        </style>
+        <script>
+            $(function(){
+                $("#btnShow").click(function(){
+                    $("#tblBanCo").show(1000);
+                });
+                $("#btnHide").click(function(){
+                    $("#tblBanCo").hide(1000);
+                });
+                $("#btnToggle").click(function(){
+                    $("#tblBanCo").toggle(1000);
+                });
+            });
+        </script>
+        <table id="tblBanCo">
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+        </table>
+    </body>
+</html>
