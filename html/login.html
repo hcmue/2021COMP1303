@@ -34,8 +34,30 @@
                 $("#btnLogin").click(function(){
                     let user = $("#txtUser");
                     let pass = $("#txtPass")
-                    $("#ketqua").html("User: " + user.val() 
-                        + ", pass: " + pass.val());
+                    // $("#ketqua").html("User: " + user.val() 
+                    //     + ", pass: " + pass.val());
+
+                    //nếu là nút Logout
+                    if($(this).html() == "Logout"){
+                        user.show(); pass.show();
+                        user.val(''); pass.val('');
+                        $(this).html("Login");
+                        $("#ketqua").html("");
+                        return true;
+                    }
+
+                    if(user.val() == '' || pass.val() == ''){
+                        $("#ketqua").html("Chưa nhập đủ thông tin");
+                        return false;
+                    }
+
+                    if(user.val().length < 5 || pass.val().length < 5){
+                        $("#ketqua").html("Đăng nhập không thành công");
+                        return false;
+                    }
+                    $("#ketqua").html("Đăng nhập thành công");
+                    user.hide(); pass.hide();
+                    $(this).html("Logout");
                 });
             });
         </script>
