@@ -6,12 +6,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.js"></script>
     <title>Đăng ký</title>
 </head>
 
 <body>
     <div class="container-fluid">
-        <form id="frmDangKy">
+        <form id="frmDangKy" method="POST" enctype="multipart/form-data">
             <h2 class="text-center text-danger">
                 Đăng ký Thành viên
             </h2>
@@ -98,12 +99,30 @@
     </style>
     <script>
         $(function () {
+            //B1: Định nghĩa hàm kiểm tra
+            function checkStudentId(value, element) {
+                let pattern = /^[0-9]{3}01[0-9]{3}[0-9]{3}$/
+                return this.optional(element) || pattern.test(value);
+            }
+            //B2: Thêm thuộc tính kiểm tra hợp lệ vào jQueryValidate
+            $.validator.addMethod("mssvdhsp", checkStudentId,
+                "Chưa đúng định dạng MSSV ĐHSP");
+
             $("#frmDangKy").validate({
                 rules: {
-
+                    MaSV: {
+                        required: true, rangelength: [10, 10],
+                        mssvdhsp: true
+                    },
+                    Hinh: {
+                        extension: "png|jpg|bmp"
+                    }
                 },
                 messages: {
-
+                    MaSV: { required: "*", rangelength: "13 ký tự" },
+                    Hinh: {
+                        extension: "Chấp nhận file png|jpg|bmp"
+                    }
                 }
             });
         });
