@@ -21,9 +21,11 @@
     + https://github.com/ColorlibHQ/AdminLTE
     + SB - Admin https://startbootstrap.com/templates/sb-admin
     + AdminMart - https://adminmart.com/
-    
+
 Xem thử : https://colorlib.com/wp/free-admin-templates/
 
 #### CSDL:
 - Loại:
 - Sản phẩm: (id), tên, giá, hình, mô tả
+- Khách hàng: họ tên, số điện thoại, email
+- Đơn hàng: ngày mua, mua cái gì?
