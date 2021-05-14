@@ -1,0 +1,60 @@
+.hh-box {
+  width: 180px;
+  height: 240px;
+  border: 1px solid blue;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  margin: 35px 5px 5px 5px;
+}
+
+.hh-box:hover {
+  box-shadow: 0 0 7px red;
+}
+
+.hh-box-image {
+  width: 150px;
+  height: 200px;
+}
+
+.hh-box-new {
+  width: 105px;
+  height: 60px;
+  position: absolute;
+  top: -4px;
+  right: -7px;
+}
+
+.hh-box-promotion {
+  width: 90px;
+  height: 30px;
+  background-image: url(images/sales.gif);
+  position: absolute;
+  left: 0px;
+  top: 135px;
+}
+
+.hh-box-name {
+  position: absolute;
+  top: -30px;
+  left: 0px;
+  font-weight: bolder;
+  font-size: x-large;
+  width: inherit;
+  color: blue;
+}
+
+.hh-box-gia {
+  font-weight: bolder;
+  color: red;
+}
+
+.hh-box-qua {
+  width: 40px;
+  height: 32px;
+  background-image: url(images/icon_gift.png);
+  position: absolute;
+  right: 0px;
+  top: 135px;
+}
